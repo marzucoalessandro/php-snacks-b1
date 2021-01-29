@@ -75,7 +75,7 @@ $age = $_GET["age"];
 //verifico che il comando get abbia preso e passato i valori alle variabili;
 var_dump($name, $eMail, $age);
 
-if (strlen($name) > 3 && is_numeric($age) && strpos($eMail, ["@", "."]) !== false) {
+if (strlen($name) > 3 && is_numeric($age) && strpos($eMail, "@") && strpos($eMail, ".")) {
   echo "Accesso riuscito";
 }
 else {
