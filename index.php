@@ -36,13 +36,35 @@ $matches = [
 
 // var_dump($matches);
 //verificato il ns array adesso stampiamo a video tutti i valori;
-for ($i=0; $i < 4 ; $i++) {
-    echo ($matches[$i]["squadraCasa"] . " - " . $matches[$i]["squadraOspite"] . " " . $matches[$i]["puntiCasa"] . " | " . $matches[$i]["puntiOspite"]);
-    echo "<br>";
-}
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2><?php for ($i=0; $i < count($matches) ; $i++) {
+      echo ($matches[$i]["squadraCasa"] . " - " . $matches[$i]["squadraOspite"] . " " . $matches[$i]["puntiCasa"] . " | " . $matches[$i]["puntiOspite"]);
+      echo "<br>";
+    } ?></h2>
+  </body>
+</html>
+
+<?php
+//esercizio 2;
+// PHP Snack 2:
+// Passare come parametri GET name, mail e age e verificare (cercando i metodi che non
+// conosciamo nella documentazione) che:
+// 1. name sia più lungo di 3 caratteri,
+// 2. mail contenga un punto e una chiocciola
+// 3. age sia un numero.
+// Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
+
 
 
 
  ?>
-
- 
