@@ -36,23 +36,25 @@ $matches = [
 
 // var_dump($matches);
 //verificato il ns array adesso stampiamo a video tutti i valori;
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h2><?php for ($i=0; $i < count($matches) ; $i++) {
-      echo ($matches[$i]["squadraCasa"] . " - " . $matches[$i]["squadraOspite"] . " " . $matches[$i]["puntiCasa"] . " | " . $matches[$i]["puntiOspite"]);
-      echo "<br>";
-    } ?></h2>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <h2><?php for ($i=0; $i < count($matches) ; $i++) {
+    echo ($matches[$i]["squadraCasa"] . " - " . $matches[$i]["squadraOspite"] . " " . $matches[$i]["puntiCasa"] . " | " . $matches[$i]["puntiOspite"]);
+    echo "<br>";
+  } ?></h2>
+</body>
 </html>
+
+
+
+
+
 
 <?php
 //esercizio 2;
@@ -64,7 +66,21 @@ $matches = [
 // 3. age sia un numero.
 // Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 
+$_GET["name"];
+$_GET["email"];
+$_GET["age"];
+$name = $_GET["name"];
+$eMail = $_GET["email"];
+$age = $_GET["age"];
+//verifico che il comando get abbia preso e passato i valori alle variabili;
+var_dump($name, $eMail, $age);
 
+if (strlen($name) > 3 && is_numeric($age) && strpos($eMail, ["@", "."]) !== false) {
+  echo "Accesso riuscito";
+}
+else {
+  echo "Accesso negato";
+}
 
 
  ?>
